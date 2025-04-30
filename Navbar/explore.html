@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore | MuseLink</title>
+
+
+  <style>
+
+    
+    /* Explore */
+
+    
+  /* Instuments */
+  :root {
+        --background: #121212;
+        --text: #fff;
+        --primary: #1f80e1;
+        --accent: #f36f6f;
+        --muted: #b0b0b0;
+        --highlight: #e0e0e0;
+      }
+      
+
+      body {
+          background-color: var(--background);
+          font-family: 'Segoe UI', sans-serif;
+          color: var(--text);
+          text-align: center;
+          
+          
+        }
+        .section {
+      width: 1000px;
+      max-width: 1200px;
+      margin-left: 140px;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: var(--highlight);
+      margin-bottom: 2rem;
+    }
+
+    .explore-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .explore-link {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--secondary);
+      color: var(--highlight);
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .explore-link:hover {
+      background: var(--secondary);
+      color: #121212;
+      transform: scale(1.05);
+    }
+
+  </style>
+  
+</head>
+<body>
+
+  <div class="section">
+
+
+
+  <h1>Explore the World of Music</h1>
+  <p>Discover the history, technology, sound science, and more to understand the magic of music.</p>
+  <div class="explore-links">
+    <a href="history.html" class="explore-link">History of Music</a>
+    <a href="technology.html" class="explore-link">Technology in Music</a>
+    <a href="sound.html" class="explore-link">Sound Science</a>
+    <a href="global.html" class="explore-link">Global Sound Map</a>
+    <a href="moodboard.html" class="explore-link">MoodBoard</a>
+    <a href="visualizer.html" class="explore-link">Visualizer</a>
+  </div>
+
+</div>
+</body>
+</html>

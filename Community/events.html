@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | MuseLink</title>
+
+
+  <style>
+
+ 
+  /* Instuments */
+  :root {
+        --background: #121212;
+        --text: #fff;
+        --primary: #1f80e1;
+        --accent: #f36f6f;
+        --muted: #b0b0b0;
+        --highlight: #e0e0e0;
+      }
+      
+
+      body {
+          background-color: var(--background);
+          font-family: 'Segoe UI', sans-serif;
+          color: var(--text);
+          text-align: center;
+          
+          
+        }
+        .section {
+      width: 1000px;
+      max-width: 1200px;
+      margin-left: 100px;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: var(--highlight);
+      margin-bottom: 3rem;
+    }
+
+    .events-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .event-banner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
+
+    .event-banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .event-banner h2 {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+    .event-card {
+      width: 90%;
+      max-width: 1200px;
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .event-card h3 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .event-card p {
+      font-size: 1.2rem;
+      color: var(--highlight);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .event-card a {
+      text-decoration: none;
+      color: var(--secondary);
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .event-card a:hover {
+      text-decoration: underline;
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+<div class="section">
+  <h1>Upcoming Music Events</h1>
+  <p>Stay up to date with the hottest music festivals and concerts worldwide!</p>
+
+  <div class="events-container">
+
+    <div class="event-banner" style="background-image: url('https://via.placeholder.com/1500x800?text=Coachella+2025');">
+      <h2>Coachella 2025</h2>
+    </div>
+
+    <div class="event-card">
+      <h3>Coachella 2025</h3>
+      <p>Join the world's most iconic music festival, featuring top artists, art installations, and unforgettable experiences.</p>
+      <a href="#">Discover More</a>
+    </div>
+
+    <div class="event-banner" style="background-image: url('https://via.placeholder.com/1500x800?text=Tomorrowland');">
+      <h2>Tomorrowland 2025</h2>
+    </div>
+
+    <div class="event-card">
+      <h3>Tomorrowland 2025</h3>
+      <p>Experience the biggest EDM festival with breathtaking stages and incredible live performances by top DJs.</p>
+      <a href="#">Discover More</a>
+    </div>
+
+    <div class="event-banner" style="background-image: url('https://via.placeholder.com/1500x800?text=Glastonbury');">
+      <h2>Glastonbury 2025</h2>
+    </div>
+
+    <div class="event-card">
+      <h3>Glastonbury 2025</h3>
+      <p>The legendary Glastonbury Festival is back, offering performances from world-class artists and an electric atmosphere.</p>
+      <a href="#">Discover More</a>
+    </div>
+
+    <div class="event-banner" style="background-image: url('https://via.placeholder.com/1500x800?text=Montreux+Jazz+Festival');">
+      <h2>Montreux Jazz Festival 2025</h2>
+    </div>
+
+    <div class="event-card">
+      <h3>Montreux Jazz Festival 2025</h3>
+      <p>Join the global celebration of jazz at one of the most famous festivals in the world, set in the stunning Swiss Alps.</p>
+      <a href="#">Discover More</a>
+    </div>
+
+  </div>
+
+
+</div>
+
+</body>
+</html>

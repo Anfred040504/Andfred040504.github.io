@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MuseLink | Home</title>
+  
+  <style>
+
+      :root {
+        --background: #121212;
+        --text: #fff;
+        --primary: #1f80e1;
+        --accent: #f36f6f;
+        --muted: #b0b0b0;
+        --highlight: #e0e0e0;
+      }
+
+    body {
+      background-color: var(--background);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text);
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    main {
+      width: 1000px;
+      max-width: 1200px;
+      margin-left: 140px;
+      padding: 2rem;
+    }
+
+    /* Home Page */
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .link-btn {
+      background-color: var(--primary);
+      color: var(--text);
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .link-btn:hover {
+      background-color: var(--accent);
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    .intro-section {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .intro-section h2 {
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro-section p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Featured Section */
+    .featured {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .featured-item {
+      background-color: #ffffff;
+      border: 1px solid var(--primary);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    .featured-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .featured-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .featured-item-content {
+      padding: 1.5rem;
+    }
+
+    .featured-item h3 {
+      color: var(--highlight);
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .featured-item p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .featured-item a {
+      color: var(--accent);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .featured-item a:hover {
+      text-decoration: underline;
+    }
+
+    .started {
+      background-color: var(--primary);
+      color: var(--text);
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      width: 200px;
+      height: 60px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .started{
+      font-size: large;
+    }
+
+  </style>
+</head>
+<body>
+
+  <main>
+    <header>
+      <a href="login.html" class="started" >Get Started</a>
+      <h1>MuseLink</h1>
+      <p class="tagline">Explore the sound universe — discover genres, instruments, history, and more.</p>
+      <div class="links">
+        <a href="genres.html" class="link-btn">Genres</a>
+        <a href="instruments.html" class="link-btn">Instruments</a>
+        <a href="history.html" class="link-btn">History</a>
+        <a href="technology.html" class="link-btn">Tech in Music</a>
+        <a href="playlists.html" class="link-btn">Playlists</a>
+        <a href="about.html" class="link-btn">About</a>
+      </div>
+    </header>
+
+    <section class="intro-section">
+      <h2>About MuseLink</h2>
+      <p>
+        MuseLink is your portal to the world of music. Whether you're a passionate listener or a curious explorer, dive into a universe of sound — from ancient traditions to futuristic rhythms. Explore diverse genres, discover instruments from all cultures, and follow music's journey through time and tech.
+      </p>
+    </section>
+
+    <section class="featured">
+      <div class="featured-item">
+        <img src="Images/genres.png" alt="Genres">
+        <div class="featured-item-content">
+          <h3 style="color: black;">Genres of the World</h3>
+          <p style="color: black;">Explore the rich variety of music genres from across the globe, from jazz to electronic and everything in between.</p>
+          <a href="genres.html">Discover More</a>
+        </div>
+      </div>
+
+      <div class="featured-item">
+        <img src="Images/sound.jpg" alt="Instruments">
+        <div class="featured-item-content">
+          <h3 style="color: black;">Instruments and Sounds</h3>
+          <p style="color: black;">Learn about the instruments that shape music, from traditional strings to innovative electronic tools.</p>
+          <a href="instruments.html">Discover More</a>
+        </div>
+      </div>
+
+      <div class="featured-item">
+        <img src="Images/music.avif" alt="Tech in Music">
+        <div class="featured-item-content">
+          <h3> style="color: black;"The Future of Music</h3>
+          <p style="color: black;">Stay on top of the latest technological advancements in music production, AI composition, and immersive audio.</p>
+          <a href="technology.html">Discover More</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

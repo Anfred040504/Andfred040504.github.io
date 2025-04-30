@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlists | MuseLink</title>
+
+  <style>
+
+    
+    /* playlist */
+
+  /* Instuments */
+  :root {
+        --background: #121212;
+        --text: #fff;
+        --primary: #1f80e1;
+        --accent: #f36f6f;
+        --muted: #b0b0b0;
+        --highlight: #e0e0e0;
+      }
+      
+
+      body {
+          background-color: var(--background);
+          font-family: 'Segoe UI', sans-serif;
+          color: var(--text);
+          text-align: center;
+          
+          
+        }
+        .section {
+      width: 1000px;
+      max-width: 1200px;
+      margin-left: 140px;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: var(--highlight);
+      margin-bottom: 2rem;
+    }
+
+    .playlists-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .playlist-card {
+      position: relative;
+      background-color: #222;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .playlist-card:hover {
+      transform: scale(1.05);
+    }
+
+    .playlist-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 4px solid var(--primary);
+    }
+
+    .playlist-title {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      font-size: 1.5rem;
+      color: var(--text);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px 15px;
+      border-radius: 6px;
+    }
+
+    .playlist-card-details {
+      padding: 15px;
+      background-color: #1a1a1a;
+      border-radius: 0 0 15px 15px;
+    }
+
+    .playlist-card-details p {
+      margin: 5px 0;
+      font-size: 1rem;
+      color: var(--highlight);
+    }
+
+
+  </style>
+  
+</head>
+<body>
+
+
+  <div class="section">
+
+
+
+  <h1>Playlists</h1>
+  <p>Explore curated mood and genre playlists to fit your vibe.</p>
+
+  <div class="playlists-container">
+    <div class="playlist-card">
+      
+      <img src="Images/chillbeats.jpg" alt="Chill Beats" class="playlist-image">
+      <div class="playlist-title">Chill Beats</div>
+      <div class="playlist-card-details">
+        <p>Relax and unwind with mellow beats</p>
+      </div>
+    </div>
+
+    <div class="playlist-card">
+      <img src="Images/upbeat.jpg" alt="Upbeat Energy" class="playlist-image">
+      <div class="playlist-title">Upbeat Energy</div>
+      <div class="playlist-card-details">
+        <p>Get motivated with energetic tracks</p>
+      </div>
+    </div>
+
+    <div class="playlist-card">
+      <img src="Images/classic.jpg" alt="Classic Vibes" class="playlist-image">
+      <div class="playlist-title">Classic Vibes</div>
+      <div class="playlist-card-details">
+        <p>Timeless tracks from classic genres</p>
+      </div>
+    </div>
+
+    <div class="playlist-card">
+      <img src="Images/synthwave.jpg" alt="Synthwave Dreams" class="playlist-image">
+      <div class="playlist-title">Synthwave Dreams</div>
+      <div class="playlist-card-details">
+        <p>Immerse yourself in retro-futuristic sounds</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media | MuseLink</title>
+
+
+  <style>
+
+   
+  /* Instuments */
+  :root {
+        --background: #121212;
+        --text: #fff;
+        --primary: #1f80e1;
+        --accent: #f36f6f;
+        --muted: #b0b0b0;
+        --highlight: #e0e0e0;
+      }
+      
+
+      body {
+          background-color: var(--background);
+          font-family: 'Segoe UI', sans-serif;
+          color: var(--text);
+          text-align: center;
+          
+          
+        }
+        .section {
+      width: 1000px;
+      max-width: 1200px;
+      margin-left: 100px;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: var(--highlight);
+      margin-bottom: 2.5rem;
+    }
+
+    .media-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .media-item {
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .media-item:hover {
+      transform: scale(1.05);
+    }
+
+    .media-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .media-item h3 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .media-item p {
+      font-size: 1rem;
+      color: var(--highlight);
+      margin-bottom: 15px;
+    }
+
+    .media-item a {
+      text-decoration: none;
+      color: var(--secondary);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .media-item a:hover {
+      text-decoration: underline;
+    }
+
+    .media-video iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+  </style>
+
+
+</head>
+<body>
+
+  <div class="section">
+
+
+
+  <h1>Explore Media</h1>
+  <p>Browse through our collection of images, videos, and cover art related to the music world.</p>
+
+  <div class="media-container">
+
+    <div class="media-item">
+      <img src="https://via.placeholder.com/250x250?text=Cover+Art" alt="Cover Art">
+      <h3>Album Cover Art</h3>
+      <p>Explore iconic album covers from your favorite artists.</p>
+      <a href="#">View More</a>
+    </div>
+
+    <div class="media-item media-video">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h3>Music Video</h3>
+      <p>Watch the latest music video releases.</p>
+      <a href="#">View More</a>
+    </div>
+
+    <div class="media-item">
+      <img src="https://via.placeholder.com/250x250?text=Band+Photo" alt="Band Photo">
+      <h3>Band Photos</h3>
+      <p>Discover stunning photos of your favorite bands and artists.</p>
+      <a href="#">View More</a>
+    </div>
+
+    <div class="media-item">
+      <img src="https://via.placeholder.com/250x250?text=Live+Performance" alt="Live Performance">
+      <h3>Live Performances</h3>
+      <p>Experience the energy of live concerts through photos and videos.</p>
+      <a href="#">View More</a>
+    </div>
+
+    <div class="media-item media-video">
+      <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h3>Concert Highlights</h3>
+      <p>Catch up on the highlights from recent concerts and festivals.</p>
+      <a href="#">View More</a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

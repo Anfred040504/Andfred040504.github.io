@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Genres | MuseLink</title>
+
+
+  <style>
+
+:root {
+        --background: #121212;
+        --text: #fff;
+        --primary: #1f80e1;
+        --accent: #f36f6f;
+        --muted: #b0b0b0;
+        --highlight: #e0e0e0;
+      }
+
+      /* Genres */
+
+        body {
+          background-color: var(--background);
+          font-family: 'Segoe UI', sans-serif;
+          color: var(--text);
+          text-align: center;
+          
+        }
+
+        h1 {
+          font-size: 2.75rem;
+          text-align: center;
+          background: linear-gradient(to right, var(--primary), var(--accent));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+          text-align: center;
+          color: var(--muted);
+          font-size: 1.1rem;
+          margin-bottom: 2.5rem;
+        }
+
+        .genres-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          gap: 2rem;
+          max-width: 1000px;
+          margin: auto;
+          padding: 0 1rem;
+        }
+
+        .genre-card {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid var(--primary);
+          border-radius: 20px;
+          padding: 2rem 1rem;
+          text-align: center;
+          text-decoration: none;
+          color: var(--text);
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+          position: relative;
+        }
+
+        .genre-card:hover {
+          background: var(--primary);
+          transform: scale(1.05);
+        }
+
+        .genre-icon {
+          font-size: 2rem;
+          margin-bottom: 0.75rem;
+        }
+
+        .genre-name {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: var(--highlight);
+        }
+
+        main {
+      width: 1000px;
+      max-width: 1200px;
+      margin-left: 140px;
+      padding: 2rem;
+    }
+
+  </style>
+
+ 
+</head>
+<body>
+
+  <main>
+
+ 
+  <h1>Explore Genres</h1>
+  <p class="subtitle">Tap into different musical worlds — from timeless classics to futuristic vibes.</p>
+
+  <div class="genres-grid">
+    <a href="Genres/jazz.html" class="genre-card">
+      <div class="genre-icon">🎷</div>
+      <div class="genre-name">Jazz</div>
+    </a>
+    <a href="rock.html" class="genre-card">
+      <div class="genre-icon">🎸</div>
+      <div class="genre-name">Rock</div>
+    </a>
+    <a href="classical.html" class="genre-card">
+      <div class="genre-icon">🎻</div>
+      <div class="genre-name">Classical</div>
+    </a>
+    <a href="lofi.html" class="genre-card">
+      <div class="genre-icon">🎧</div>
+      <div class="genre-name">Lo-fi</div>
+    </a>
+    <a href="synthwave.html" class="genre-card">
+      <div class="genre-icon">🕹️</div>
+      <div class="genre-name">Synthwave</div>
+    </a>
+  </div>
+</main>
+</body>
+</html>

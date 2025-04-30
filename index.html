@@ -1,0 +1,257 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MuseLink | Navigation Only</title>
+
+    <style>
+
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 20px;
+
+        margin-top: -10px;
+        margin-right: 30px;
+        width: 100%;
+        background: linear-gradient(135deg, #1f1c2c, #3b3b58); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      .nav-item {
+        position: relative;
+      }
+
+      .nav-link {
+        color: #ffffff;
+        background-color: #4caf50;
+        padding: 10px 16px;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: 0.3s;
+        cursor: pointer;
+        font-weight: 500;
+        font-family: 'Arial', sans-serif;
+      }
+
+      .nav-link:hover {
+        background-color: #ff4081; 
+        color: #fff; 
+        transform: scale(1.05);
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 110%;
+        left: 0;
+        background-color: #4caf50;
+        padding: 10px 0;
+        border-radius: 8px;
+        min-width: 180px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+  
+      .dropdown-content div {
+        padding: 10px 16px;
+        color: #fff;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+
+      .dropdown-content div:hover {
+        background-color: #ff4081;
+        color: #fff;
+      }
+
+      .nav-item:hover .dropdown-content {
+        display: block;
+      }
+
+      .nav-item.active .nav-link {
+        background-color: #ff4081; 
+        color: #fff;
+      }
+
+      
+      #main-content {
+        padding: 100px 20px 40px;
+        max-width: 1000px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+        background-color: #121212; 
+        border-radius: 8px;
+      
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <nav>
+      <div class="nav-item" onclick="loadContent('home')"><div class="nav-link">Home</div></div>
+      <div class="nav-item" onclick="loadContent('about')"><div class="nav-link">About</div></div>
+
+      <div class="nav-item">
+        <div class="nav-link" onclick="loadContent('genres')">Genres ▾</div>
+        <div class="dropdown-content">
+          <div onclick="loadContent('jazz')">Jazz</div>
+          <div onclick="loadContent('rock')">Rock</div>
+          <div onclick="loadContent('classical')">Classical</div>
+          <div onclick="loadContent('lo-fi')">Lo-fi</div>
+          <div onclick="loadContent('synthwave')">Synthwave</div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <div class="nav-link" onclick="loadContent('instruments')">Instruments ▾</div>
+        <div class="dropdown-content">
+          <div onclick="loadContent('overview')">Overview</div>
+          <div onclick="loadContent('theremen')">Theremin</div>
+          <div onclick="loadContent('tabla')">Tabla</div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <div class="nav-link" onclick="loadContent('explore')">Explore ▾</div>
+        <div class="dropdown-content">
+          <div onclick="loadContent('history')">History of Music</div>
+          <div onclick="loadContent('technology')">Technology in Music</div>
+          <div onclick="loadContent('sound')">Sound Science</div>
+          <div onclick="loadContent('global')">Global Sound Map</div>
+          <div onclick="loadContent('moodboard')">MoodBoard</div>
+          <div onclick="loadContent('visualizer')">Visualizer</div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <div class="nav-link" onclick="loadContent('community')">Community ▾</div>
+        <div class="dropdown-content">
+          <div onclick="loadContent('events')">Events</div>
+          <div onclick="loadContent('media')">Media</div>
+          <div onclick="loadContent('podcasts')">Podcasts</div>
+          <div onclick="loadContent('blog')">Blog</div>
+        </div>
+      </div>
+
+      <div class="nav-item"><div class="nav-link" onclick="loadContent('playlists')">Playlists</div></div>
+      <div class="nav-item"><div class="nav-link" onclick="loadContent('contact')">Contact</div></div>
+      <div class="nav-item"><div class="nav-link" onclick="loadContent('credits')">Credits</div></div>
+     
+     
+
+    <div class="nav-item" id="user-nav-item" style="display: none;">
+      <div class="nav-link" id="user-name"> ▾</div>
+      <div class="dropdown-content">
+        <div>Profile</div>
+        <div onclick="logout()">Logout</div>
+      </div>
+    </div>
+
+    </nav>
+
+    <div id="main-content"></div>
+
+    <script>
+
+
+    window.onload = function() {
+          const storedUser = JSON.parse(localStorage.getItem('user')); 
+          if (storedUser && storedUser.name) {
+            document.getElementById('user-name').textContent = storedUser.name + " ▾"; 
+            document.getElementById('user-nav-item').style.display = 'block'; 
+          }
+        };
+
+      function loadContent(page) {
+        let contentUrl = '';
+        if (page === 'home') {
+          contentUrl = 'Navbar/home.html';
+        } else if (page === 'about') {
+          contentUrl = 'Navbar/about.html';
+        } else if (page === 'genres') {
+          contentUrl = 'Navbar/genres.html';
+        } else if (page === 'instruments') {
+          contentUrl = 'Navbar/instruments.html';
+        } else if (page === 'explore') {
+          contentUrl = 'Navbar/explore.html';
+        } else if (page === 'community') {
+          contentUrl = 'Navbar/community.html';
+        } else if (page === 'playlists') {
+          contentUrl = 'Navbar/playlists.html';
+        } else if (page === 'contact') {
+          contentUrl = 'Navbar/contact.html';
+        } else if (page === 'credits') {
+          contentUrl = 'Navbar/credits.html';
+        } else if (page === 'jazz') {
+          contentUrl = 'Genres/jazz.html';
+        } else if (page === 'rock') {
+          contentUrl = 'Genres/rock.html';
+        } else if (page === 'classical') {
+          contentUrl = 'Genres/classical.html';
+        } else if (page === 'lo-fi') {
+          contentUrl = 'Genres/lo-fi.html';
+        } else if (page === 'synthwave') {
+          contentUrl = 'Genres/synthwave.html';
+        } else if (page === 'overview') {
+          contentUrl = 'Instruments/overview.html';
+        } else if (page === 'theremen') {
+          contentUrl = 'Instruments/theremen.html';
+        } else if (page === 'tabla') {
+          contentUrl = 'Instruments/tabla.html';
+        } else if (page === 'history') {
+          contentUrl = 'Explore/history.html';
+        } else if (page === 'technology') {
+          contentUrl = 'Explore/technology.html';
+        } else if (page === 'sound') {
+          contentUrl = 'Explore/sound.html';
+        } else if (page === 'global') {
+          contentUrl = 'Explore/global.html';
+        } else if (page === 'moodboard') {
+          contentUrl = 'Explore/moodboard.html';
+        } else if (page === 'visualizer') {
+          contentUrl = 'Explore/visualizer.html';
+        } else if (page === 'events') {
+          contentUrl = 'Community/events.html';
+        } else if (page === 'media') {
+          contentUrl = 'Community/media.html';
+        } else if (page === 'podcasts') {
+          contentUrl = 'Community/podcasts.html';
+        } else if (page === 'blog') {
+          contentUrl = 'Community/blog.html';
+        }
+
+        fetch(contentUrl)
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('main-content').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading content:', error));
+      }
+
+      loadContent('home');
+      
+
+function logout() {
+  localStorage.removeItem('loggedIn');  
+  localStorage.removeItem('user'); 
+ 
+
+  document.getElementById('user-nav-item').style.display = 'none';  
+  window.location.href = 'login.html'; 
+}
+
+
+    </script>
+
+  </body>
+  </html>
