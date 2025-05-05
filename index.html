@@ -23,6 +23,10 @@
         z-index: 1000;
       }
 
+      #main-content{
+        margin-left: 100px;
+      }
+
       .nav-item {
         position: relative;
       }
@@ -116,7 +120,7 @@
         <div class="nav-link" onclick="loadContent('instruments')">Instruments ▾</div>
         <div class="dropdown-content">
           <div onclick="loadContent('overview')">Overview</div>
-          <div onclick="loadContent('theremen')">Theremin</div>
+          <div onclick="loadContent('theremen')">Theremen</div>
           <div onclick="loadContent('tabla')">Tabla</div>
         </div>
       </div>
@@ -152,14 +156,16 @@
     <div class="nav-item" id="user-nav-item" style="display: none;">
       <div class="nav-link" id="user-name"> ▾</div>
       <div class="dropdown-content">
-        <div>Profile</div>
+        
         <div onclick="logout()">Logout</div>
       </div>
     </div>
 
     </nav>
 
-    <div id="main-content"></div>
+    <div id="main-content">
+
+    </div>
 
     <script>
 
@@ -242,10 +248,9 @@
       
 
 function logout() {
-  localStorage.removeItem('loggedIn');  
-  localStorage.removeItem('user'); 
+  // localStorage.removeItem('loggedIn');  
+  // localStorage.removeItem('user'); 
  
-
   document.getElementById('user-nav-item').style.display = 'none';  
   window.location.href = 'login.html'; 
 }
